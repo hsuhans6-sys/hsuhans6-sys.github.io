@@ -171,6 +171,66 @@ footer { padding:25px 0; color:var(--muted); font-size:12px; }
     transform: none;
   }
 }
+/* Subtle engineering grid */
+.hero {
+  position: relative;
+  isolation: isolate;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 15px -15px;
+  z-index: -1;
+  pointer-events: none;
+  background-image:
+    linear-gradient(rgba(0, 107, 91, 0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 107, 91, 0.06) 1px, transparent 1px);
+  background-size: 36px 36px;
+  mask-image: radial-gradient(ellipse at center, black 20%, transparent 75%);
+}
+
+/* Homepage entrance */
+@keyframes homeEnter {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero > div > .kicker {
+  animation: homeEnter 0.7s ease both;
+}
+
+.hero h1 {
+  animation: homeEnter 0.7s ease 0.12s both;
+}
+
+.hero .lead {
+  animation: homeEnter 0.7s ease 0.24s both;
+}
+
+.hero .button {
+  animation: homeEnter 0.7s ease 0.36s backwards;
+}
+
+.hero .profile {
+  animation: homeEnter 0.8s ease 0.24s both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero > div > .kicker,
+  .hero h1,
+  .hero .lead,
+  .hero .button,
+  .hero .profile {
+    animation: none;
+  }
+}
 </style>
 </head>
 
