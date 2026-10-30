@@ -130,6 +130,47 @@ footer { padding:25px 0; color:var(--muted); font-size:12px; }
 .card figcaption {
   text-align:center;
 }
+/* Project cards */
+.card {
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    border-color 0.25s ease;
+}
+
+@media (hover: hover) {
+  .card:hover {
+    transform: translateY(-5px);
+    border-color: var(--green);
+    box-shadow: 0 12px 28px rgba(23, 43, 54, 0.10);
+  }
+}
+
+/* Buttons */
+.button {
+  transition:
+    transform 0.2s ease,
+    background-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 14px rgba(0, 107, 91, 0.18);
+}
+
+/* Respect reduced-motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  .card,
+  .button {
+    transition: none;
+  }
+
+  .card:hover,
+  .button:hover {
+    transform: none;
+  }
+}
 </style>
 </head>
 
