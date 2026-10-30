@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Hans Hsu — Robotics and mechanical engineering portfolio.">
+<title>Hans Hsu | Engineering Portfolio</title>
+<style>
+:root {
+  --bg:#f6f5ef; --ink:#172b36; --muted:#56666c;
+  --green:#006b5b; --line:#d8dfd9;
+}
+* { box-sizing:border-box; }
+html { scroll-behavior:smooth; scroll-padding-top:100px; }
+body {
+  margin:0; background:var(--bg); color:var(--ink);
+  font:16px/1.75 Arial,sans-serif;
+}
+a { color:inherit; text-underline-offset:4px; }
+a:focus-visible { outline:3px solid var(--green); outline-offset:5px; }
+.wrap { max-width:1100px; margin:auto; padding:0 26px; }
+header {
+  position:sticky; top:0; z-index:10;
+  background:var(--bg); border-bottom:1px solid var(--line);
+}
+.nav {
+  display:flex; justify-content:space-between;
+  align-items:center; gap:20px; padding:18px 0;
+}
+.brand { font-size:23px; font-weight:bold; text-decoration:none; }
+.brand span { color:var(--green); }
+nav { display:flex; gap:22px; flex-wrap:wrap; }
+nav a { font-size:14px; text-decoration:none; }
+nav a:hover { color:var(--green); }
+.hero {
+  display:grid; grid-template-columns:1.5fr 1fr;
+  align-items:center; gap:50px; padding:75px 0;
+}
+.kicker {
+  color:var(--green); font-size:11px;
+  font-weight:bold; letter-spacing:2px; text-transform:uppercase;
+}
+h1 {
+  font-size:clamp(42px,5.5vw,66px); line-height:1.12;
+  letter-spacing:-2px; margin:22px 0;
+}
+h1 span { color:var(--green); }
+.lead { color:var(--muted); font-size:18px; }
+.button {
+  display:inline-block; padding:11px 20px; margin-top:15px;
+  background:var(--ink); color:white; border-radius:4px;
+  text-decoration:none; font-size:14px;
+}
+.button:hover { background:var(--green); }
+.profile {
+  background:var(--ink); color:white;
+  border-radius:8px; padding:36px;
+}
+.avatar {
+  width:110px; height:110px; border:1px solid #7e9990;
+  border-radius:50%; display:grid; place-items:center;
+  color:#d9ef91; font-size:40px; margin-bottom:32px;
+}
+.profile h2 { margin:0; font-size:28px; }
+.profile p { margin:6px 0; color:#cbd5cf; font-size:14px; }
+section { padding:50px 0; border-top:1px solid var(--line); }
+h2 { font-size:32px; line-height:1.25; letter-spacing:-1px; }
+h3 { line-height:1.35; }
+p { color:var(--muted); }
+.columns { display:grid; grid-template-columns:1fr 1fr; gap:35px; }
+.cards { display:grid; grid-template-columns:repeat(3,1fr); gap:18px; }
+.card {
+  background:white; border:1px solid var(--line);
+  border-radius:6px; padding:25px;
+}
+.card h3 { font-size:22px; margin:17px 0; }
+.card p { font-size:14px; }
+.date { font-size:11px; color:var(--green); letter-spacing:1px; }
+.label {
+  display:block; color:var(--ink); font-size:12px;
+  font-weight:bold; margin-bottom:5px;
+}
+.tags { font-size:12px; color:var(--green); margin-top:22px; }
+.progress {
+  border-left:3px solid var(--green);
+  padding:8px 22px; margin-top:30px;
+}
+.progress h3 { margin:8px 0; }
+.progress p { font-size:14px; }
+.job { border-top:2px solid var(--ink); padding-top:18px; }
+.job h3 { margin:10px 0; }
+.job p { font-size:14px; }
+.skills { display:grid; grid-template-columns:repeat(3,1fr); gap:25px; }
+.skills article { border-left:1px solid var(--line); padding-left:20px; }
+.skills h3 { font-size:17px; }
+.skills ul { padding-left:18px; color:var(--muted); font-size:14px; }
+.contact {
+  padding:35px; border-radius:7px;
+  background:var(--ink); color:white;
+}
+.contact h2 { margin-top:0; }
+.contact p { color:#cbd5cf; }
+.links { display:flex; flex-wrap:wrap; gap:25px; }
+footer { padding:25px 0; color:var(--muted); font-size:12px; }
+@media(max-width:750px) {
+  .hero,.columns,.cards,.skills { grid-template-columns:1fr; }
+  .hero { padding:40px 0; gap:25px; }
+  .nav { align-items:flex-start; flex-direction:column; gap:8px; }
+  nav { gap:17px; }
+  nav a { font-size:12px; }
+  section { padding:35px 0; }
+  .profile { padding:25px; }
+  .avatar { width:75px; height:75px; font-size:28px; margin-bottom:20px; }
+}
+@media(prefers-reduced-motion:reduce) {
+  html { scroll-behavior:auto; }
+}
+</style>
+</head>
+
+<body>
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="#home">Hans Hsu<span>.</span></a>
+    <nav aria-label="Main navigation">
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#experience">Experience</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+  <div class="hero" id="home">
+    <div>
+      <div class="kicker">Robotics / Mechanical Design</div>
+      <h1>Mechanical thinking.<br><span>Robotic possibilities.</span></h1>
+      <p class="lead">
+        I'm Denghan Xu, a Robotics MSc student at the University of Manchester
+        with a background in mechanical design, manufacturing and automation.
+      </p>
+      <a class="button" href="#projects">Explore my projects ↗</a>
+    </div>
+    <aside class="profile">
+      <div class="avatar" role="img" aria-label="DX monogram avatar">DX</div>
+      <h2>Denghan Xu</h2>
+      <p>MSc Robotics</p>
+      <p>University of Manchester</p>
+      <p>Mechanical design · CAD · Robotics</p>
+    </aside>
+  </div>
+
+  <section id="about">
+    <div class="kicker">01 / Introduction</div>
+    <h2>About me</h2>
+    <div class="columns">
+      <div>
+        <p>
+          My engineering experience includes CAD modelling, mechanical
+          assemblies, engineering drawings and hands-on robot construction.
+          University projects and industry placements have helped me
+          understand how an initial concept becomes a practical mechanism.
+        </p>
+        <p>
+          I am now developing my programming and robotics skills,
+          building on my background in mechanical engineering.
+        </p>
+      </div>
+      <div>
+        <h3>Career & research interests</h3>
+        <p>
+          I am interested in robotic manipulation, assistive devices and
+          mechanical design for robotic systems. My aim is to combine
+          practical hardware design with sensing and control in future
+          engineering development work.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <div class="kicker">02 / Selected work</div>
+    <h2>From mechanisms to robots</h2>
+
+    <div class="cards">
+      <article class="card">
+        <div class="date">APR–JUN 2025</div>
+        <h3>Arm Rehabilitation Assistive Device</h3>
+        <p>
+          A mechanical design project exploring an affordable device
+          to support rehabilitation exercises for stroke patients.
+        </p>
+        <p>
+          <span class="label">My contribution</span>
+          Designed the mechanical structure in Solid Edge, conducted
+          market research and created exploded-view renderings using
+          KeyShot. Project materials included an English introduction
+          and a demonstration animation.
+        </p>
+        <div class="tags">Solid Edge · KeyShot · Mechanical Design</div>
+      </article>
+
+      <article class="card">
+        <div class="date">MAY–JUL 2025</div>
+        <h3>Planar Indexing Cam Mechanism</h3>
+        <p>
+          A mechanism design project combining cam-profile calculation,
+          motion simulation and mechanical assembly design.
+        </p>
+        <p>
+          <span class="label">My contribution</span>
+          Used UG for motion simulation and MATLAB for cam-profile
+          simulation. Modelled components in SolidWorks, including
+          the housing and input shaft, and prepared assembly
+          and exploded views.
+        </p>
+        <div class="tags">SolidWorks · MATLAB · UG / NX</div>
+      </article>
+
+      <article class="card">
+        <div class="date">JUN 2025</div>
+        <h3>ROBOTAC Robot Competition</h3>
+        <p>
+          Participated in the 24th national university robot competition
+          as part of a team that received a national third prize.
+        </p>
+        <p>
+          <span class="label">My contribution</span>
+          Contributed to mechanical design, physical robot assembly,
+          and circuit and program design within the team.
+        </p>
+        <div class="tags">Robot Assembly · Teamwork · Competition</div>
+      </article>
+    </div>
+
+    <article class="progress">
+      <div class="kicker">In progress</div>
+      <h3>Robotic Grasping — Group Design Project</h3>
+      <p>
+        My current responsibility is grasping. I am researching the
+        gripper and manipulation approach and exploring how this
+        subsystem can connect with the wider ROS 2 robotic system.
+      </p>
+    </article>
+  </section>
+
+  <section id="experience">
+    <div class="kicker">03 / Industry experience</div>
+    <h2>Learning in practice</h2>
+    <div class="columns">
+      <article class="job">
+        <div class="date">JUL–SEP 2024 · SHIYAN, CHINA</div>
+        <h3>Dongfeng Special Equipment Co., Ltd.</h3>
+        <strong>Mechanical Engineering Intern</strong>
+        <p>
+          Worked on non-standard mechanical equipment designs and
+          modifications. Used SolidWorks for modelling and engineering
+          drawings, and supported communication of designs to manufacturing.
+        </p>
+      </article>
+      <article class="job">
+        <div class="date">JUN–JUL 2024 · BAOJI, CHINA</div>
+        <h3>Northwest Machine Co., Ltd.</h3>
+        <strong>Production Design Intern</strong>
+        <p>
+          Learned about design workflows, manufacturing processes and
+          machining equipment. Gained exposure to mechanical assembly,
+          including bearings, and precision requirements for medical equipment.
+        </p>
+      </article>
+    </div>
+  </section>
+
+  <section id="skills">
+    <div class="kicker">04 / Tools & skills</div>
+    <h2>My engineering toolkit</h2>
+    <div class="skills">
+      <article>
+        <h3>Design & visualisation</h3>
+        <ul>
+          <li>SolidWorks · Solid Edge</li>
+          <li>CAD · CAXA · UG / NX</li>
+          <li>KeyShot rendering</li>
+          <li>Engineering drawings and assembly</li>
+        </ul>
+      </article>
+      <article>
+        <h3>Programming & robotics</h3>
+        <ul>
+          <li>Python — developing skills</li>
+          <li>C++ — foundational knowledge</li>
+          <li>MATLAB — project experience</li>
+          <li>ROS 2 — currently learning</li>
+        </ul>
+      </article>
+      <article>
+        <h3>Teamwork & communication</h3>
+        <ul>
+          <li>Team-based engineering projects</li>
+          <li>Student organisation leadership</li>
+          <li>Technical documentation</li>
+          <li>Event organisation and coordination</li>
+        </ul>
+      </article>
+    </div>
+  </section>
+
+  <section id="education">
+    <div class="kicker">05 / Education</div>
+    <h2>Engineering foundations</h2>
+    <div class="columns">
+      <article>
+        <h3>University of Manchester</h3>
+        <p>MSc Robotics · Current study</p>
+      </article>
+      <article>
+        <h3>Shaanxi University of Science & Technology</h3>
+        <p>Mechanical Design, Manufacturing & Automation</p>
+        <p>Undergraduate background at Ulster College.</p>
+      </article>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="contact">
+      <h2>Let's connect.</h2>
+      <p>
+        Interested in robotics, mechanical design and opportunities
+        to learn through practical engineering.
+      </p>
+      <div class="links">
+        <a href="mailto:hsuhans6@gmail.com">Email ↗</a>
+        <a href="https://github.com/hsuhans6-sys">GitHub ↗</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="wrap">
+  © 2026 Hans Hsu · Robotics & Mechanical Design Portfolio
+</footer>
+</body>
+</html>
