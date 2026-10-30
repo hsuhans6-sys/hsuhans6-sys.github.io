@@ -231,6 +231,136 @@ footer { padding:25px 0; color:var(--muted); font-size:12px; }
     animation: none;
   }
 }
+@keyframes scrollEnter {
+  from {
+    opacity: 0;
+    translate: 0 22px;
+  }
+  to {
+    opacity: 1;
+    translate: 0 0;
+  }
+}
+
+.scroll-enter {
+  animation: scrollEnter 0.65s ease both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .scroll-enter {
+    animation: none;
+  }
+}
+/* Dark technology theme */
+:root {
+  --bg: #09121f;
+  --ink: #e8f0fa;
+  --muted: #a9b9ce;
+  --green: #55e6cf;
+  --line: #293b50;
+}
+
+body {
+  background-color: var(--bg);
+  background-image:
+    radial-gradient(
+      ellipse at 10% 0%,
+      rgba(0, 170, 160, 0.13),
+      transparent 45%
+    ),
+    radial-gradient(
+      ellipse at 95% 30%,
+      rgba(60, 100, 220, 0.12),
+      transparent 45%
+    );
+}
+
+header {
+  background: rgba(9, 18, 31, 0.94);
+  backdrop-filter: blur(14px);
+  border-bottom: 1px solid var(--line);
+}
+
+.brand span,
+.kicker,
+.date,
+.tags {
+  color: var(--green);
+}
+
+/* Profile and project panels */
+.profile,
+.contact {
+  background: linear-gradient(135deg, #14283b, #101d30);
+  border: 1px solid #315064;
+}
+
+.profile p,
+.contact p {
+  color: #bacbdb;
+}
+
+.card {
+  background: linear-gradient(145deg, #142338, #101c2c);
+  border-color: var(--line);
+}
+
+@media (hover: hover) {
+  .card:hover {
+    border-color: var(--green);
+    box-shadow: 0 12px 32px rgba(0, 220, 190, 0.10);
+  }
+}
+
+.job {
+  border-top-color: #55e6cf;
+}
+
+/* Keep technical drawings readable */
+.card img {
+  background: white;
+  border: 1px solid #34485e;
+  border-radius: 6px;
+}
+
+/* Override earlier inline caption colours */
+.card figcaption,
+.card p[style*="font-size:12px"] {
+  color: #a9b9ce !important;
+}
+
+.label {
+  color: var(--ink);
+}
+
+/* Buttons */
+.button {
+  background: #55e6cf;
+  color: #071a22;
+  border: 1px solid #55e6cf;
+}
+
+.button:hover {
+  background: #96ffeb;
+  color: #071a22;
+  box-shadow: 0 0 20px rgba(85, 230, 207, 0.22);
+}
+
+a:focus-visible {
+  outline-color: #55e6cf;
+}
+
+/* Homepage grid */
+.hero::before {
+  background-image:
+    linear-gradient(rgba(85, 230, 207, 0.10) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(85, 230, 207, 0.10) 1px, transparent 1px);
+}
+
+footer {
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+}
 </style>
 </head>
 
