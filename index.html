@@ -68,7 +68,11 @@ h2 { font-size:32px; line-height:1.25; letter-spacing:-1px; }
 h3 { line-height:1.35; }
 p { color:var(--muted); }
 .columns { display:grid; grid-template-columns:1fr 1fr; gap:35px; }
-.cards { display:grid; grid-template-columns:repeat(3,1fr); gap:18px; }
+.cards {
+  display:grid;
+  grid-template-columns:1fr;
+  gap:28px;
+}
 .card {
   background:white; border:1px solid var(--line);
   border-radius:6px; padding:25px;
@@ -115,6 +119,17 @@ footer { padding:25px 0; color:var(--muted); font-size:12px; }
 @media(prefers-reduced-motion:reduce) {
   html { scroll-behavior:auto; }
 }
+.card img {
+  max-width:650px;
+  max-height:450px;
+  object-fit:contain;
+  margin-left:auto !important;
+  margin-right:auto !important;
+}
+
+.card figcaption {
+  text-align:center;
+}
 </style>
 </head>
 
@@ -144,7 +159,11 @@ footer { padding:25px 0; color:var(--muted); font-size:12px; }
       <a class="button" href="#projects">Explore my projects ↗</a>
     </div>
     <aside class="profile">
-      <div class="avatar" role="img" aria-label="DX monogram avatar">DX</div>
+      <img
+  src="白底证件照_01.png"
+  alt="Portrait of Denghan Xu"
+  style="width:130px; height:170px; object-fit:cover; border-radius:6px; display:block; margin-bottom:24px;"
+>
       <h2>Denghan Xu</h2>
       <p>MSc Robotics</p>
       <p>University of Manchester</p>
@@ -347,11 +366,12 @@ footer { padding:25px 0; color:var(--muted); font-size:12px; }
     <div class="columns">
       <article>
         <h3>University of Manchester</h3>
-        <p>MSc Robotics · Current study</p>
+        <p>MSc Robotics · September 2026–Present</p>
       </article>
       <article>
         <h3>Shaanxi University of Science & Technology</h3>
         <p>Mechanical Design, Manufacturing & Automation</p>
+        <p>September 2022–June 2026</p>
         <p>Undergraduate background at Ulster College.</p>
       </article>
     </div>
